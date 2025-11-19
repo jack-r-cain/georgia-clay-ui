@@ -1,7 +1,7 @@
 {
   "name": "georgia-clay-ui",
   "private": false,
-  "version": "0.0.7",
+  "version": "0.1.0",
   "type": "module",
   "files": [
     "dist"
@@ -52,6 +52,7 @@
     "storybook": "^10.0.8",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.3",
-    "vite": "^7.2.2"
+    "vite": "^7.2.2",
+    "vite-plugin-dts": "^4.5.4"
   }
 }

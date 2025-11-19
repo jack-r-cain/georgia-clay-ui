@@ -3,10 +3,19 @@ import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
+import dts from 'vite-plugin-dts'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths(), tailwindcss()],
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    tailwindcss(),
+    dts({
+      rollupTypes: true,
+      tsconfigPath: resolve(__dirname, 'tsconfig.app.json'),
+    }),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
